@@ -13,6 +13,7 @@ export class AppComponent {
   constructor() {
     this.model = new Employee("Bogdan", "Burlacu");
     this.dateTime();
+    this.returnFirstNameAndLastName();
   }
   finishedProjectsIncrementer() {
     if(this.model.finishedProjects < 10) {
@@ -34,6 +35,12 @@ export class AppComponent {
     } else {
       this.model.dayMsg = "Buna seara"
     }
+  }
+  returnFirstNameAndLastName() {
+    console.log(this.model.firstName + " " + this.model.lastName)
+  }
+  returnInitialValues() {
+    this.model = new Employee("Bogdan", "Burlacu");
   }
 }
 
