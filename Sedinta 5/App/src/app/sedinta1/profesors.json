@@ -1,0 +1,80 @@
+[
+	{
+		"nume": "Popescu",
+		"prenume": "Ion",
+		"esteActiv": true,
+		"subjects": [
+			{
+				"subjectName": "Rapirea din Serai",
+				"lectureNumbers": 50
+			},
+			{
+				"subjectName": "Rapirea din Iasi",
+				"lectureNumbers": 20
+			},
+			{
+				"subjectName": "Rapirea dupa Bucuresti",
+				"lectureNumbers": 90
+			}
+		]
+	},
+	{
+		"nume": "Verde",
+		"prenume": "Florin",
+		"esteActiv": false,
+		"subjects": [
+			{
+				"subjectName": "Galaxy of Heroes",
+				"lectureNumbers": 12
+			},
+			{
+				"subjectName": "Galaxy of Samurai",
+				"lectureNumbers": 20
+			},
+			{
+				"subjectName": "Galaxy of Robots",
+				"lectureNumbers": 32
+			}
+		]
+	},
+	{
+		"nume": "Nenea",
+		"prenume": "Vasile",
+		"esteActiv": true,
+		"subjects": [
+			{
+				"subjectName": "League of Legends",
+				"lectureNumbers": 34
+			},
+			{
+				"subjectName": "League of Heroes",
+				"lectureNumbers": 45
+			},
+			{
+				"subjectName": "League of champions",
+				"lectureNumbers": 19
+			}
+		]
+	},
+	{
+		"nume": "Popescu",
+		"prenume": "Ion",
+		"esteActiv": true,
+		"subjects": [
+			{
+				"subjectName": "Defence of the Ancients",
+				"lectureNumbers": 50
+			},
+			{
+				"subjectName": "Defence of the Giants",
+				"lectureNumbers": 20
+			},
+			{
+				"subjectName": "Defence of the ginny",
+				"lectureNumbers": 90
+			}
+		]
+	}
+
+
+]

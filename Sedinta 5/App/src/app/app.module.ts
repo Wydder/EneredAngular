@@ -4,14 +4,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { Sedinta1Component } from './sedinta1/sedinta1.component';
+import { Sedinta2Component } from './sedinta2/sedinta2.component';
+import { Sedinta3Component } from './sedinta3/sedinta3.component';
+import { Sedinta5Component } from './sedinta5/sedinta5.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    Sedinta1Component,
+    Sedinta2Component,
+    Sedinta3Component,
+    Sedinta5Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
     FormsModule
   ],
   providers: [],

@@ -1,5 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align: center">
+  
   <input type="text" placeholder="{{ model.firstName }}" [(ngModel)]="model.firstName"/><br />
   <br />
   <input type="text" placeholder="{{ model.lastName }}" [(ngModel)]="model.lastName" /><br />
@@ -27,6 +28,12 @@
   </h1>
   <p>{{model.errorMsg}}</p>  
 </div>
-
+<nav>
+  <a routerLink="/sedinta1" routerLinkActive="active">Sedinta1</a>
+  <a routerLink="/sedinta2">Sedinta2</a>
+  <a routerLink="/sedinta3">Sedinta3</a>
+  <a routerLink="/sedinta5">Sedinta5</a>
+  <a routerLink="/sedinta1">Sedinta1</a>
+</nav>
 
 <router-outlet></router-outlet>
