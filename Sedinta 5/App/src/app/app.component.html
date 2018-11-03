@@ -1,6 +1,36 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align: center">
-  
+<div>
+    <div *ngFor="let car of carList">
+      <h3>My car is a <strong>{{car.model}}</strong> and have description <strong>{{car.description}}</strong></h3>
+    </div>
+  </div>
+
+
+<div>
+  <div *ngIf="carModel">
+    <h3>My car is a <strong>{{carModel.model}}</strong> and have description <strong>{{carModel.description}}</strong></h3>
+  </div>
+  <button (click)="askCarDetails()">Add car</button>
+</div>
+
+
+<div>
+  <div [ngClass]="currentClasses" class="defaultState">
+
+  </div>
+  <input type="checkbox" [(ngModel)]="currentClasses.zoomIn">
+</div>
+
+<div>
+  <div [ngStyle]="divProp">
+  </div>
+  <input type="checkbox" [(ngModel)]="zoomInCheck">
+  <input type="checkbox" [(ngModel)]="changeBackground">
+  <button (click)=divPropUpdate()>Update</button>
+</div>
+
+
+<div>  
   <input type="text" placeholder="{{ model.firstName }}" [(ngModel)]="model.firstName"/><br />
   <br />
   <input type="text" placeholder="{{ model.lastName }}" [(ngModel)]="model.lastName" /><br />
@@ -29,11 +59,20 @@
   <p>{{model.errorMsg}}</p>  
 </div>
 <nav>
-  <a routerLink="/sedinta1" routerLinkActive="active">Sedinta1</a>
-  <a routerLink="/sedinta2">Sedinta2</a>
-  <a routerLink="/sedinta3">Sedinta3</a>
-  <a routerLink="/sedinta5">Sedinta5</a>
-  <a routerLink="/sedinta1">Sedinta1</a>
+  <ul>
+    <li>
+        <a routerLink="/sedinta1" routerLinkActive="active">Sedinta1</a>
+    </li>
+    <li>
+      <a routerLink="/sedinta2">Sedinta2</a>
+    </li>  
+    <li>
+      <a routerLink="/sedinta3">Sedinta3</a>
+    </li>  
+    <li>
+      <a routerLink="/sedinta5">Sedinta5</a>
+    </li>  
+  </ul>
 </nav>
 
 <router-outlet></router-outlet>

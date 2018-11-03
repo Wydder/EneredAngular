@@ -1,0 +1,15 @@
+div {
+    margin-bottom: 10px;
+}
+
+.zoomIn {
+    width: 300px !important;
+    height: 300px !important;
+    background-color: blue;
+}
+
+.defaultState {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+}
