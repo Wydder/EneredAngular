@@ -38,8 +38,9 @@ export class AppComponent {
 
   askCarDetails() {
     var model = prompt("What model is your car?");
-    var description = prompt("What description does your car have?")
+    var description = prompt("What description does your car have?")    
     this.carModel = new Car(model, description);
+    this.carList.push(this.carModel);
   }
 
 

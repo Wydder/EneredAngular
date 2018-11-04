@@ -1,14 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div>
-    <div *ngFor="let car of carList">
-      <h3>My car is a <strong>{{car.model}}</strong> and have description <strong>{{car.description}}</strong></h3>
+    <div *ngFor="let car of carList; let i=index">
+      <h3>{{ i + 1 }}. My car is a <strong>{{car.model}}</strong> and have description <strong>{{car.description}}</strong></h3>
     </div>
   </div>
 
 
 <div>
   <div *ngIf="carModel">
-    <h3>My car is a <strong>{{carModel.model}}</strong> and have description <strong>{{carModel.description}}</strong></h3>
+    <!--<h3>My car is a <strong>{{carModel.model}}</strong> and have description <strong>{{carModel.description}}</strong></h3>-->
   </div>
   <button (click)="askCarDetails()">Add car</button>
 </div>
