@@ -1,0 +1,63 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!--<app-home></app-home>-->
+<router-outlet></router-outlet>
+
+<!--<div>
+    <div *ngFor="let car of carList; let i=index">
+      <h3>{{ i + 1 }}. My car is a <strong>{{car.model}}</strong> and have description <strong>{{car.description}}</strong></h3>
+    </div>
+  </div>
+
+
+<div>
+  <div *ngIf="carModel">
+    <h3>My car is a <strong>{{carModel.model}}</strong> and have description <strong>{{carModel.description}}</strong></h3>
+  </div>
+  <button (click)="askCarDetails()">Add car</button>
+</div>
+
+
+<div>
+  <div [ngClass]="currentClasses" class="defaultState">
+
+  </div>
+  <input type="checkbox" [(ngModel)]="currentClasses.zoomIn">
+</div>
+
+<div>
+  <div [ngStyle]="divProp">
+  </div>
+  <input type="checkbox" [(ngModel)]="zoomInCheck">
+  <input type="checkbox" [(ngModel)]="changeBackground">
+  <button (click)=divPropUpdate()>Update</button>
+</div>
+
+
+<div>  
+  <input type="text" placeholder="{{ model.firstName }}" [(ngModel)]="model.firstName"/><br />
+  <br />
+  <input type="text" placeholder="{{ model.lastName }}" [(ngModel)]="model.lastName" /><br />
+  <br />
+  <button (click)="returnFirstNameAndLastName()">Console log fullname</button><br />
+  <br />
+  <button (click)="returnInitialValues()">Return values</button>
+  <br />
+  <h3>
+    First name: {{ model.firstName }}
+  </h3>
+  <h3>
+    Last name: {{ model.lastName }}
+  </h3>
+  <h3>
+    Full name: {{ model.firstName }} {{ model.lastName }}
+  </h3>
+  <h3>
+    {{ model.dayMsg }}
+  </h3>
+  <button (click) = "finishedProjectsIncrementer()">Increment</button>
+  <button (click) = "refreshIncrementer()">Refresh</button>
+  <h1>
+    Count increment: {{ model.finishedProjects }}
+  </h1>
+  <p>{{model.errorMsg}}</p>  
+</div>-->
