@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="exercise-container">
+    <div *ngFor="let car of carList; let i=index">
+      <h3>{{ i + 1 }}. My car is a <strong>{{ car.model }}</strong> and have description <strong>{{ car.description }}</strong></h3>
+    </div>
+  </div>
+
+
+  <div class="exercise-container">
+    <div *ngIf="carModel">
+      <h3>My car is a <strong>{{ carModel.model }}</strong> and have description <strong>{{ carModel.description }}</strong></h3>
+    </div>
+    <button (click)="askCarDetails()">Add car</button>
+  </div>
+
+
+  <div class="exercise-container">
+    <div [ngClass]="currentClasses" class="defaultState">
+
+    </div>
+    <input type="checkbox" [(ngModel)]="currentClasses.zoomIn">
+  </div>
+
+  <div class="exercise-container">
+    <div [ngStyle]="divProp">
+    </div>
+    <input type="checkbox" [(ngModel)]="zoomInCheck">
+    <input type="checkbox" [(ngModel)]="changeBackground">
+    <button (click)=divPropUpdate()>Update</button>
+  </div>
+
+
+  <div class="exercise-container">
+    <div class="col-6">
+      <input type="text" placeholder="{{ model.firstName }}" [(ngModel)]="model.firstName" /><br />
+      <br />
+      <input type="text" placeholder="{{ model.lastName }}" [(ngModel)]="model.lastName" /><br />
+      <br />
+      <button (click)="returnFirstNameAndLastName()">Console log fullname</button><br />
+      <br />
+      <button (click)="returnInitialValues()">Return values</button>
+      <br />
+    </div>
+    <div class="col-6">
+      <p>First name: {{ model.firstName }}</p>
+      <p>Last name: {{ model.lastName }}</p>
+      <h3>Full name: {{ model.firstName }} {{ model.lastName }}</h3>
+      <h4>{{ model.dayMsg }}</h4>
+    </div>
+  </div>
+
+  <div class="exercise-container">
+    <button (click)="finishedProjectsIncrementer()">Increment</button>
+    <button (click)="refreshIncrementer()">Refresh</button>
+    <h2>Count increment: {{ model.finishedProjects }}</h2>
+    <p>{{model.errorMsg}}</p>
+  </div>
+</div>

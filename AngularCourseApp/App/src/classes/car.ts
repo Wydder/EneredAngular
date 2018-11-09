@@ -10,6 +10,18 @@ export class Car {
         this.wheels = new Wheel();
     }
 }
+
+export class CarTwin {
+  model: string;
+  description: string;
+
+  constructor(model, description) {
+    this.model = model;
+    this.description = description;
+  }
+
+}
+
 class Wheel {
 
 }

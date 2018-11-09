@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseLibraryComponent } from "src/app/course-library/course-library.component";
+import { ViewChild, ElementRef } from "@angular/core";
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,10 @@ import { CourseLibraryComponent } from "src/app/course-library/course-library.co
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  title = "Enter Angular Course"
+  title = "Choose your path"
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     
