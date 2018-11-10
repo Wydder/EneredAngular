@@ -1,0 +1,32 @@
+.container {
+  background-image: url('/assets/img/world.jpg');
+  background-repeat: repeat;
+  height: auto;
+}
+
+.exercise-container {
+  width: 100%;
+  height: auto;
+  border: 1px solid black;
+  padding: 10px 15px;
+}
+.col-6 {
+  width: 50%;
+  display: inline-block;  
+}
+
+div {
+  margin-bottom: 20px;
+}
+
+.zoomIn {
+  width: 300px !important;
+  height: 300px !important;
+  background-color: blue;
+}
+
+.defaultState {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+}

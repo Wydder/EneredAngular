@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\course-library",
+    "\\src\\app\\home",
+    "\\src\\app\\not-found",
+    "\\src\\app\\sedinta2",
+    "\\src\\assets",
+    "\\src\\assets\\img",
+    "\\src\\classes"
+  ],
+  "SelectedNode": "\\src\\app\\sedinta2\\sedinta2.component.html",
+  "PreviewInSolutionExplorer": false
+}
