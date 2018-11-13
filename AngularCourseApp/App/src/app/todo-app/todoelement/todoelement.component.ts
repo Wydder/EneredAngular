@@ -1,4 +1,12 @@
-export class Todoelement {
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-todoelement',
+  templateUrl: './todoelement.component.html',
+  styleUrls: ['./todoelement.component.css']
+})
+export class TodoelementComponent implements OnInit {
+
   id: number;
   name: string;
   isDone: boolean;
@@ -22,4 +30,8 @@ export class Todoelement {
   save(name) {
     this.name = name
   }
+
+  ngOnInit() {
+  }
+
 }

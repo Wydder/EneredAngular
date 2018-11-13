@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\App",
+    "\\App\\src",
+    "\\App\\src\\app",
+    "\\App\\src\\app\\course-library",
+    "\\App\\src\\app\\exercises",
+    "\\App\\src\\app\\home",
+    "\\App\\src\\app\\introduction",
+    "\\App\\src\\assets",
+    "\\App\\src\\assets\\img",
+    "\\App\\src\\classes"
+  ],
+  "SelectedNode": "\\App\\src\\app\\introduction\\introduction.component.ts",
+  "PreviewInSolutionExplorer": false
+}

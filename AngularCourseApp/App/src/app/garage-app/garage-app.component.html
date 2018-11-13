@@ -1,0 +1,27 @@
+<div class="container">
+  <div *ngFor="let car of carsDb.carsDb; let i=index">
+    <div>
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{ car.Name }}</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://seeklogo.com/images/C/Chevrolet-logo-E01CD324DF-seeklogo.com.png" alt="Photo of a Chevrolet logo">
+        <mat-card-content>
+          <p>Miles_per_Gallon: {{ car.Miles_per_Gallon }}</p>
+          <p>Cylinders: {{ car.Cylinders }}</p>
+          <p>Displacement: {{ car.Displacement }}</p>
+          <p>Horsepower: {{ car.Horsepower }}</p>
+          <p>Weight_in_lbs: {{ car.Weight_in_lbs }}</p>
+          <p>Year: {{ car.Year }}</p>
+          <p>Origin: {{ car.Origin }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="car.oilChange(auteservice)">Change Oil</button>
+          <button mat-raised-button color="primary" >Clean gas tank</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

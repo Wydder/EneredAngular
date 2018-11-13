@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="exercise-container">
+    <div *ngFor="let car of carList; let i=index">
+      <h3>{{ i + 1 }}. My car is a <strong>{{ car.model }}</strong> and have description <strong>{{ car.description }}</strong></h3>
+    </div>
+    <button mat-raised-button color="primary" (click)="askCarDetails()">Add car</button><br />
+    <div *ngIf="carModel">
+      <h3>My car is a <strong>{{ carModel.model }}</strong> and have description <strong>{{ carModel.description }}</strong></h3>
+    </div>
+  </div>
+
+  <div class="exercise-container">
+    <div [ngClass]="currentClasses" class="defaultState">
+
+    </div>
+    <mat-checkbox [(ngModel)]="currentClasses.zoomIn">Zoom in</mat-checkbox>
+  </div>
+
+  <div class="exercise-container">
+    <div [ngStyle]="divProp">
+    </div>
+    <mat-checkbox [(ngModel)]="zoomInCheck">Zoom in</mat-checkbox><br />
+    <mat-checkbox [(ngModel)]="changeBackground">Change background</mat-checkbox><br />
+    <button mat-raised-button color="primary" (click)=divPropUpdate()>Update</button>
+  </div>
+
+
+  <div class="exercise-container">
+    <div class="col-6">
+      <mat-form-field appearance="outline">
+        <mat-label>First name</mat-label>
+        <input matInput type="text" placeholder="ex: 'John'" [(ngModel)]="model.firstName" />
+      </mat-form-field><br />
+      <mat-form-field appearance="outline">
+        <mat-label>Last name</mat-label>
+        <input matInput type="text" placeholder="ex: 'Doe" [(ngModel)]="model.lastName" />
+      </mat-form-field>
+      <br />
+      <button mat-raised-button color="primary" (click)="returnFirstNameAndLastName()">Console log fullname</button><br />
+      <br />
+      <button mat-raised-button color="accent" (click)="returnInitialValues()">Return values</button>
+      <br />
+    </div>
+    <div class="col-6">
+      <p>First name: {{ model.firstName }}</p>
+      <p>Last name: {{ model.lastName }}</p>
+      <h3>Full name: {{ model.firstName }} {{ model.lastName }}</h3>
+      <h4>{{ model.dayMsg }}</h4>
+    </div>
+  </div>
+
+  <div class="exercise-container">
+    <button mat-raised-button color="accent" (click)="refreshIncrementer()">Refresh</button><button mat-icon-button color="primary" (click)="finishedProjectsIncrementer()">
+      <i class="material-icons">
+        exposure_plus_1
+      </i>
+    </button>
+    <h2>
+      Count increment: {{ model.finishedProjects }}
+    </h2>
+    <p>{{model.errorMsg}}</p>
+  </div>
+</div>
