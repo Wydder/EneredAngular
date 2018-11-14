@@ -8,6 +8,8 @@ import { IntroductionComponent } from './course-library/introduction/introductio
 import { ExercisesComponent } from './course-library/exercises/exercises.component';
 import { TodoAppComponent } from './todo-app/todo-app.component';
 import { GarageAppComponent } from './garage-app/garage-app.component';
+import { UserComponent } from './userexercise/user/user.component';
+import { UserexerciseComponent } from './userexercise/userexercise.component';
 
 
 const routes: Routes = [
@@ -35,6 +37,11 @@ const routes: Routes = [
   {
     path: 'garage-app',
     component: GarageAppComponent
+  },
+  //User exercise
+  {
+    path: 'user-exercise',
+    component: UserexerciseComponent
   },
 
   //General

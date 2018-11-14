@@ -54,6 +54,9 @@ import { CdkTreeModule } from "@angular/cdk/tree";
 import { ScrollingModule } from "@angular/cdk/scrolling";
 import { TodoelementComponent } from './todo-app/todoelement/todoelement.component';
 import { GarageAppComponent } from './garage-app/garage-app.component';
+import { UserexerciseComponent } from './userexercise/userexercise.component';
+import { UserComponent } from './userexercise/user/user.component';
+import { AddUserComponent } from './userexercise/add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +68,10 @@ import { GarageAppComponent } from './garage-app/garage-app.component';
     ExercisesComponent,
     TodoAppComponent,
     TodoelementComponent,
-    GarageAppComponent
+    GarageAppComponent,
+    UserexerciseComponent,
+    UserComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
