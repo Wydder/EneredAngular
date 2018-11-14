@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeTwin } from "src/classes/employee";
 import { CarTwin } from "src/classes/car";
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-exercises',
@@ -18,11 +19,11 @@ export class ExercisesComponent implements OnInit {
   currentClasses = {};
 
   constructor() {
-    this.model = new EmployeeTwin("Bogdan", "Burlacu");
+    this.model = new EmployeeTwin("", "");
     this.dateTime();
     this.returnFirstNameAndLastName();
     this.defaultCurrentClasses();
-
+    
     this.carList.push({
       "model": "Dacia",
       "description": "Blabla"
@@ -94,7 +95,7 @@ export class ExercisesComponent implements OnInit {
     console.log(this.model.firstName + " " + this.model.lastName)
   }
   returnInitialValues() {
-    this.model = new EmployeeTwin("Bogdan", "Burlacu");
+    this.model = new EmployeeTwin("", "");
     this.dateTime();
     this.returnFirstNameAndLastName();
     this.defaultCurrentClasses();

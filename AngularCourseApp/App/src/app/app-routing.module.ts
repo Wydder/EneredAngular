@@ -4,30 +4,37 @@ import { AppComponent } from "src/app/app.component";
 import { NotFoundComponent } from "src/app/not-found/not-found.component";
 import { HomeComponent } from "src/app/home/home.component";
 import { CourseLibraryComponent } from "src/app/course-library/course-library.component";
-import { IntroductionComponent } from './introduction/introduction.component';
-import { ExercisesComponent } from './exercises/exercises.component';
+import { IntroductionComponent } from './course-library/introduction/introduction.component';
+import { ExercisesComponent } from './course-library/exercises/exercises.component';
 import { TodoAppComponent } from './todo-app/todo-app.component';
+import { GarageAppComponent } from './garage-app/garage-app.component';
 
 
 const routes: Routes = [
   //CourseLibrary
   {
-    path: 'Course-library',
+    path: 'course-library',
     component: CourseLibraryComponent
   },
   {
-    path: 'Course-library/Introduction',
+    path: 'course-library/introduction',
     component: IntroductionComponent
   },
   {
-    path: 'Course-library/Exercises',
+    path: 'course-library/exercises',
     component: ExercisesComponent
   },
 
   //Todo-App
   {
-    path: 'Todo-App',
+    path: 'todo-app',
     component: TodoAppComponent
+  },
+
+  //Garage-App
+  {
+    path: 'garage-app',
+    component: GarageAppComponent
   },
 
   //General

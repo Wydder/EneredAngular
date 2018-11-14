@@ -14,6 +14,7 @@ export class Employee {
 }
 
 export class EmployeeTwin {
+  title = "Employee exercise";
   firstName: string;
   lastName: string;
   finishedProjects: number;

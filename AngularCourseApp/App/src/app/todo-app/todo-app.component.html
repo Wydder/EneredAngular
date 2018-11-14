@@ -6,20 +6,29 @@
     </h1>
   </div>
   <div>
-    <input type="text" ngModel="toDoElModel.name" />
-    <button (click)="addToDo()">Add todo</button>
+    <mat-form-field appearance="outline">
+      <mat-label>Add todo</mat-label>
+      <input #toDoElModel matInput placeholder="ex: 'Pay bills" [(ngModel)]="toDoElModel.name" />
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="addToDo('', toDoElModel.name)">Add todo</button>
   </div>
-  <ul>
-    <li *ngFor="let todoel of toDoList">
+  
+  <mat-list>
+    <mat-list-item *ngFor="let todoel of toDoList">
       <div *ngIf="todoel.editMode">
-        <input [(ngModel)]="todoel.name" />
-        <button (click)="todoel.ediMode()">Cancel</button>
-        <!--<button (click)="todoel.ediMode()">Save</button>-->
+        <mat-form-field matLine>
+          <input matInput [(ngModel)]="todoel.name" />
+        </mat-form-field>
+        <div matLine>
+          <button mat-raised-button color="primary" (click)="todoel.cancel()">Cancel</button>
+          <button mat-raised-button color="primary" (click)="updateToDo(todoel)">Save</button>
+        </div>
       </div>
+
       <div *ngIf="!todoel.editMode">
-        <p>{{ todoel.name }}</p>
-        <button (click)="todoel.ediMode()">Edit</button>
+        <p matLine>{{ todoel.name }}</p>
+        <button matLine mat-raised-button color="primary" (click)="todoel.ediMode()">Edit</button>
       </div>
-    </li>
-  </ul>
+    </mat-list-item>
+  </mat-list>
 </div>
