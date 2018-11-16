@@ -10,7 +10,7 @@
       <mat-label>Add todo</mat-label>
       <input #toDoElModel matInput placeholder="ex: 'Pay bills" [(ngModel)]="toDoElModel.name" />
     </mat-form-field>
-    <button mat-raised-button color="primary" (click)="addToDo('', toDoElModel.name)">Add todo</button>
+    <button mat-raised-button color="primary" (click)="addToDo()">Add todo</button>
   </div>
   
   <mat-list>

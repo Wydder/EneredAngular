@@ -55,3 +55,9 @@ body {
   top: calc(50% - 160px);
   left: calc(50% - 210px);
 }
+
+.tablecell {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}

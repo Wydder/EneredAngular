@@ -1,6 +1,20 @@
-<p>
-  userexercise works!
-</p>
-<div *ngFor="let user of userList">
-  <app-user [user]="user"></app-user>
+<div class="container">
+  <div class="tablerow">
+    <div class="tablecell">
+      <p>Username</p>
+    </div>
+    <div class="tablecell">
+        <p>Email</p>
+    </div>
+    <div class="tablecell">
+        <p>Is active</p>
+    </div>
+  </div>
+  <div *ngFor="let user of userList" class="tablerow">
+      <app-user [user]="user"></app-user>
+  </div>
+  <div class="tablerow">
+      <app-add-user (onAdd)="onAdd($event)"></app-add-user>
+  </div>
 </div>
+  

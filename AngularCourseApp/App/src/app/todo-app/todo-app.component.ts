@@ -8,41 +8,28 @@ import { TodoelementComponent } from "./todoelement/todoelement.component";
   styleUrls: ['./todo-app.component.css']
 })
 export class TodoAppComponent implements OnInit {
-  title = 'ToDoApp';
-  toDoTaskName: string = "";
+  title = 'ToDoApp';  
   toDoElModel: Todoelement;
-  toDoList = [];
+  toDoList: Todoelement[];
 
   constructor() {
 
   }
   
 
-  addToDo(id, name) {
-    id = this.toDoList.length;
-    this.toDoElModel = new Todoelement(id, name);
+  addToDo() {
+    this.toDoElModel = new Todoelement();
+    this.toDoList.push(this.toDoElModel);
     //console.log('added')
     //console.log(this.toDoElModel);
-    this.toDoList.push(this.toDoElModel);
     console.log(this.toDoList);
   }
 
-  updateToDo(todoel) {
-    for (var i = 0; i < this.toDoList.length; i++) {
-      if (todoel.id == this.toDoList[i].id) {
-        this.toDoList[i].name = todoel.name
-        this.toDoList[i].editMode = false
-        console.log(this.toDoList[i].name)
-      }
-    }
+  updateToDo() {
+    
   }
-  cancelEdit(todoel) {
-    for (var i = 0; i < this.toDoList.length; i++) {
-      if (todoel.id == this.toDoList[i].id) {
-        this.toDoList[i].editMode = false
-        console.log(this.toDoList[i].name)
-      }
-    }
+  cancelEdit() {
+    
   }
 
   ngOnInit() {

@@ -10,6 +10,8 @@ import { TodoAppComponent } from './todo-app/todo-app.component';
 import { GarageAppComponent } from './garage-app/garage-app.component';
 import { UserComponent } from './userexercise/user/user.component';
 import { UserexerciseComponent } from './userexercise/userexercise.component';
+import { TictacAppComponent } from './tictac-app/tictac-app.component';
+import { PassGameAppComponent } from './pass-game-app/pass-game-app.component';
 
 
 const routes: Routes = [
@@ -43,7 +45,14 @@ const routes: Routes = [
     path: 'user-exercise',
     component: UserexerciseComponent
   },
-
+  {
+    path: 'tictac-app',
+    component: TictacAppComponent
+  },
+  {
+    path: 'pass-game-app',
+    component: PassGameAppComponent
+  },
   //General
   {
     path: '',

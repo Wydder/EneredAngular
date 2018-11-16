@@ -35,4 +35,8 @@ export class UserexerciseComponent implements OnInit {
   ngOnInit() {
   }
 
+  onAdd(user: User) {
+    this.userList.push(user);
+  }
+
 }

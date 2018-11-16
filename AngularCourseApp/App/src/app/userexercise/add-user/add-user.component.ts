@@ -1,6 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { User } from 'src/classes/user';
-import { EventEmitter } from 'protractor';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-add-user',
@@ -9,16 +9,22 @@ import { EventEmitter } from 'protractor';
 })
 export class AddUserComponent implements OnInit {
   user: User;
-  @Output
+  
+  @Output()
   onAdd: EventEmitter<User> = new EventEmitter();
 
-  constructor() { }
+  constructor() { 
+    this.user = new User();
+  }
 
   ngOnInit() {
   }
 
   addUser() {
-    
+    console.log(this.user );
+    this.onAdd.emit(this.user);
+    this.user = new User();
   }
+
 
 }

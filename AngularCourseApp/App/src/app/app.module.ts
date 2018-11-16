@@ -57,6 +57,9 @@ import { GarageAppComponent } from './garage-app/garage-app.component';
 import { UserexerciseComponent } from './userexercise/userexercise.component';
 import { UserComponent } from './userexercise/user/user.component';
 import { AddUserComponent } from './userexercise/add-user/add-user.component';
+import { TictacAppComponent } from './tictac-app/tictac-app.component';
+import { PassGameAppComponent } from './pass-game-app/pass-game-app.component';
+import { PlayerComponent } from './pass-game-app/player/player.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +74,10 @@ import { AddUserComponent } from './userexercise/add-user/add-user.component';
     GarageAppComponent,
     UserexerciseComponent,
     UserComponent,
-    AddUserComponent
+    AddUserComponent,
+    TictacAppComponent,
+    PassGameAppComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,

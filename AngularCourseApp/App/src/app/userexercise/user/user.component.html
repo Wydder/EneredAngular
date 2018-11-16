@@ -1,3 +1,11 @@
-<span>{{ user.username }}</span>
-<span>{{ user.email }}</span>
-<input type="checkbox" [(ngModel)]="user.isActive">
+<div class="tablecell">
+    <p><span>{{ user.username }}</span></p>
+</div>
+<div class="tablecell">
+    <p><span>{{ user.email }}</span></p>
+</div>
+<div class="tablecell">
+    <input type="checkbox" [(ngModel)]="user.isActive">
+</div>
+
+

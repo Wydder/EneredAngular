@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Todoelement } from 'src/classes/todoelement';
 
 @Component({
   selector: 'app-todoelement',
@@ -7,31 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoelementComponent implements OnInit {
 
-  id: number;
-  name: string;
-  isDone: boolean;
-  editMode: boolean;
+  todoelement: Todoelement;
+  
+  constructor() {
 
-  constructor(id: number, name: string) {
-    this.id = id;
-    this.name = name;
-    this.isDone = false;
-    this.editMode = false;
   }
 
-  ediMode() {
-    this.editMode = true;
-  }
-
-  cancel() {
-    this.editMode = false;
-  }
-
-  save(name) {
-    this.name = name
-  }
-
-  ngOnInit() {
+    ngOnInit() {
   }
 
 }
