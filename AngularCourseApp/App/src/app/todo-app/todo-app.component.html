@@ -6,29 +6,13 @@
     </h1>
   </div>
   <div>
-    <mat-form-field appearance="outline">
-      <mat-label>Add todo</mat-label>
-      <input #toDoElModel matInput placeholder="ex: 'Pay bills" [(ngModel)]="toDoElModel.name" />
-    </mat-form-field>
-    <button mat-raised-button color="primary" (click)="addToDo()">Add todo</button>
+    <app-add-todo (onAdd)="addToDo($event)"></app-add-todo>
   </div>
-  
   <mat-list>
-    <mat-list-item *ngFor="let todoel of toDoList">
-      <div *ngIf="todoel.editMode">
-        <mat-form-field matLine>
-          <input matInput [(ngModel)]="todoel.name" />
-        </mat-form-field>
-        <div matLine>
-          <button mat-raised-button color="primary" (click)="todoel.cancel()">Cancel</button>
-          <button mat-raised-button color="primary" (click)="updateToDo(todoel)">Save</button>
-        </div>
-      </div>
-
-      <div *ngIf="!todoel.editMode">
-        <p matLine>{{ todoel.name }}</p>
-        <button matLine mat-raised-button color="primary" (click)="todoel.ediMode()">Edit</button>
-      </div>
+    <h3 mat-subheader>To do list</h3>
+    <mat-list-item *ngFor="let todo of toDoList">
+      <app-todoelement class="listrow" [todoelement]="todo"></app-todoelement>
+      <mat-divider></mat-divider>
     </mat-list-item>
   </mat-list>
 </div>

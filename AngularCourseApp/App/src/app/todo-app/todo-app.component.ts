@@ -9,17 +9,16 @@ import { TodoelementComponent } from "./todoelement/todoelement.component";
 })
 export class TodoAppComponent implements OnInit {
   title = 'ToDoApp';  
-  toDoElModel: Todoelement;
-  toDoList: Todoelement[];
+  todoelement: Todoelement;
+  toDoList: Todoelement[] = [];
 
   constructor() {
-
   }
   
 
-  addToDo() {
-    this.toDoElModel = new Todoelement();
-    this.toDoList.push(this.toDoElModel);
+  addToDo(todoelement: Todoelement) {
+    this.toDoList.push(todoelement);
+    this.todoelement = new Todoelement();
     //console.log('added')
     //console.log(this.toDoElModel);
     console.log(this.toDoList);

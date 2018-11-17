@@ -60,6 +60,7 @@ import { AddUserComponent } from './userexercise/add-user/add-user.component';
 import { TictacAppComponent } from './tictac-app/tictac-app.component';
 import { PassGameAppComponent } from './pass-game-app/pass-game-app.component';
 import { PlayerComponent } from './pass-game-app/player/player.component';
+import { AddTodoComponent } from './todo-app/add-todo/add-todo.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { PlayerComponent } from './pass-game-app/player/player.component';
     AddUserComponent,
     TictacAppComponent,
     PassGameAppComponent,
-    PlayerComponent
+    PlayerComponent,
+    AddTodoComponent
   ],
   imports: [
     BrowserModule,

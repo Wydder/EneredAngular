@@ -1,6 +1,6 @@
 export class Todoelement {
   id: number;
   name: string;
-  isDone: boolean;
-  editMode: boolean;
+  isDone: boolean = false;
+  editMode: boolean = false;
 }  
