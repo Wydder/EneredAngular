@@ -1,3 +1,12 @@
 <p>
   tictac-app works!
 </p>
+<div class="table">
+  <div class="line" *ngFor="let line of table; let l=index">
+    <div *ngFor="let boxvalue of line; let c=index">
+      <app-box class="box" (positionclicked)="buildTable($event)" [line]="l" [column]="c" [value]="boxvalue"></app-box>
+    </div>
+    
+  </div>
+  
+</div>
