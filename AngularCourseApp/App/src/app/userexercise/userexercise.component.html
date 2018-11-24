@@ -11,7 +11,7 @@
     </div>
   </div>
   <div *ngFor="let user of userList" class="tablerow">
-      <app-user [user]="user"></app-user>
+      <app-user (deleteUser)="deleteUser($event)" [user]="user"></app-user>
   </div>
   <div class="tablerow">
       <app-add-user (onAdd)="onAdd($event)"></app-add-user>

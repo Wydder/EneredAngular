@@ -9,23 +9,28 @@ import { BoxComponent } from './box/box.component';
 export class TictacAppComponent implements OnInit {
 
   table: boolean[][];
-  box: BoxComponent = new BoxComponent();
-  player: boolean = true;
+  box: BoxComponent;
+  player: boolean;
+  winner: string;
 
   constructor() { 
+    this.initValues();    
+  }
+
+  initValues() {
     this.table = [];
-    
+    this.box = new BoxComponent();
+    this.player = true;
+    this.winner = null;
     this.table.push([undefined, undefined, undefined]);
     this.table.push([undefined, undefined, undefined]);
     this.table.push([undefined, undefined, undefined]);
     console.log(this.table);
-
-    
   }
 
   buildTable(position: number[]) {
-    var column = position[1]
     var line = position[0];
+    var column = position[1];
 
     if (this.player == true) {      
       this.table[line][column] = true;
@@ -40,13 +45,67 @@ export class TictacAppComponent implements OnInit {
   }
 
   checkWinner() {
+    //diagonala
     if(this.table[0][0] == this.table[1][1] && this.table[1][1] == this.table[2][2] && this.table[2][2] == true) {
-      alert('X has won!')
+      
+      this.winner = "X";
+    } else if (this.table[0][0] == this.table[1][1] && this.table[1][1] == this.table[2][2] && this.table[2][2] == false) {
+      //this.winner = "0";
+      this.winner = "0";
     }
+
+    if(this.table[2][0] == this.table[1][1] && this.table[1][1] == this.table[0][2] && this.table[0][2] == true) {
+      this.winner = "X";
+    } else if (this.table[2][0] == this.table[1][1] && this.table[1][1] == this.table[0][2] && this.table[0][2] == false) {
+      this.winner = "0";
+    }
+
+    //linia 0
+    if(this.table[0][0] == this.table[0][1] && this.table[0][1] == this.table[0][2] && this.table[0][2] == true) {
+      this.winner = "X";
+    } else if (this.table[0][0] == this.table[0][1] && this.table[0][1] == this.table[0][2] && this.table[0][2] == false) {
+      this.winner = "0";
+    }
+    //linia 1
+    if(this.table[1][0] == this.table[0][1] && this.table[1][1] == this.table[1][2] && this.table[1][2] == true) {
+      this.winner = "X";
+    } else if (this.table[1][0] == this.table[0][1] && this.table[1][1] == this.table[1][2] && this.table[1][2] == false) {
+      this.winner = "0";
+    }
+    //linia 2
+    if(this.table[2][0] == this.table[2][1] && this.table[2][1] == this.table[2][2] && this.table[2][2] == true) {
+      this.winner = "X";
+    } else if (this.table[2][0] == this.table[2][1] && this.table[2][1] == this.table[2][2] && this.table[2][2] == false) {
+      this.winner = "0";
+    }
+
+    //coloana 0
+    if(this.table[0][0] == this.table[1][0] && this.table[1][0] == this.table[2][0] && this.table[2][0] == true) {
+      this.winner = "X";
+    } else if (this.table[0][0] == this.table[1][0] && this.table[1][0] == this.table[2][0] && this.table[2][0] == false) {
+      this.winner = "0";
+    }
+    //coloana 1
+    if(this.table[0][1] == this.table[1][1] && this.table[1][1] == this.table[2][1] && this.table[2][1] == true) {
+      this.winner = "X";
+    } else if (this.table[0][1] == this.table[1][1] && this.table[1][1] == this.table[2][1] && this.table[2][1] == false) {
+      this.winner = "0";
+    }
+    //coloana 2
+    if(this.table[0][2] == this.table[1][2] && this.table[1][2] == this.table[2][2] && this.table[2][2] == true) {
+      this.winner = "X";
+    } else if (this.table[0][2] == this.table[1][2] && this.table[1][2] == this.table[2][2] && this.table[2][2] == false) {
+      this.winner = "0";
+    }
+  }
+
+  restartGame() {
+    this.initValues()
   }
 
   ngOnInit() {
 
-  }
+  }  
 
 }
+

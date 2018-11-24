@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { TictacAppComponent } from '../tictac-app.component';
 
 @Component({
   selector: 'app-box',
@@ -6,7 +7,9 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./box.component.css']
 })
 export class BoxComponent implements OnInit {
-  
+  @Input()
+  winner: string;
+
   @Input()
   value: boolean;  
   
@@ -18,16 +21,29 @@ export class BoxComponent implements OnInit {
 
   @Output()
   positionclicked: EventEmitter<number[]> = new EventEmitter();
-    
+  
+  //tictactoe: TictacAppComponent = new TictacAppComponent();
+
   constructor() { 
     console.log(this.value);
   }
 
   playerMove() {
-    if(this.value == undefined) {      
-      this.positionclicked.emit([this.line, this.column]);
-      console.log([this.line, this.column])
-    }
+    //console.log(this.tictactoe.winner)
+    // if(this.value) {
+    //   if(this.value == undefined) {      
+    //     this.positionclicked.emit([this.line, this.column]);
+    //     console.log([this.line, this.column])
+    //   }
+    // }
+    if(!this.winner) {
+      if(this.value == undefined) {      
+        this.positionclicked.emit([this.line, this.column]);
+        console.log([this.line, this.column])
+      }
+    } 
+    
+    
   }
 
 

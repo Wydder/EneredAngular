@@ -4,9 +4,13 @@
 <div class="table">
   <div class="line" *ngFor="let line of table; let l=index">
     <div *ngFor="let boxvalue of line; let c=index">
-      <app-box class="box" (positionclicked)="buildTable($event)" [line]="l" [column]="c" [value]="boxvalue"></app-box>
+      <app-box class="box" (positionclicked)="buildTable($event)" [winner]="winner" [line]="l" [column]="c" [value]="boxvalue"></app-box>
     </div>
     
+  </div>
+  <div *ngIf="winner == '0' || winner == 'X'">
+    <p>Player {{ winner }} has won</p>
+    <button (click)="restartGame()">Restart game</button>
   </div>
   
 </div>

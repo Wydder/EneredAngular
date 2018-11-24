@@ -39,4 +39,11 @@ export class UserexerciseComponent implements OnInit {
     this.userList.push(user);
   }
 
+  deleteUser(user: User) {
+    const index = this.userList.indexOf(user, 0);
+    if (index > -1) {
+      this.userList.splice(index, 1);
+    }
+  }
+
 }
