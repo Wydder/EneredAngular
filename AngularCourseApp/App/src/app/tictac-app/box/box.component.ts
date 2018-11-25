@@ -29,21 +29,12 @@ export class BoxComponent implements OnInit {
   }
 
   playerMove() {
-    //console.log(this.tictactoe.winner)
-    // if(this.value) {
-    //   if(this.value == undefined) {      
-    //     this.positionclicked.emit([this.line, this.column]);
-    //     console.log([this.line, this.column])
-    //   }
-    // }
     if(!this.winner) {
       if(this.value == undefined) {      
         this.positionclicked.emit([this.line, this.column]);
         console.log([this.line, this.column])
       }
-    } 
-    
-    
+    }   
   }
 
 

@@ -1,16 +1,27 @@
-<p>
-  tictac-app works!
-</p>
-<div class="table">
-  <div class="line" *ngFor="let line of table; let l=index">
-    <div *ngFor="let boxvalue of line; let c=index">
-      <app-box class="box" (positionclicked)="buildTable($event)" [winner]="winner" [line]="l" [column]="c" [value]="boxvalue"></app-box>
+<div class="container">
+  <h1><span class="red">Tic </span> <span class="yellow">Tac </span> <span class="blue">Toe</span></h1>
+  <div class="content">
+    <div class="table">
+      <div class="line" *ngFor="let line of table; let l=index">
+        <div *ngFor="let boxvalue of line; let c=index">
+          <app-box class="box" (positionclicked)="buildTable($event)" [winner]="winner" [line]="l" [column]="c" [value]="boxvalue"></app-box>
+        </div>
+      </div>
     </div>
-    
+    <div class="msg_section">
+      <div *ngIf="winner == 'X'">
+        <button class="button" (click)="restartGame()">Restart game</button>
+        <p class="mark red">Player {{ winner }} has won</p>
+      </div>
+      <div *ngIf="winner == '0'">
+        <button class="button" (click)="restartGame()">Restart game</button>
+        <p class="mark blue">Player {{ winner }} has won</p>
+      </div>
+      <div *ngIf="winner == null && checkFirstGameResult == true">
+        <button class="button" (click)="restartGame()">Restart game</button>
+        <p class="mark">No player has won</p>
+      </div>
+    </div>    
   </div>
-  <div *ngIf="winner == '0' || winner == 'X'">
-    <p>Player {{ winner }} has won</p>
-    <button (click)="restartGame()">Restart game</button>
-  </div>
-  
 </div>
+

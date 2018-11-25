@@ -12,13 +12,17 @@ export class TictacAppComponent implements OnInit {
   box: BoxComponent;
   player: boolean;
   winner: string;
+  title: string
+  checkFirstGameResult: boolean;
 
-  constructor() { 
+  constructor() {
+    this.title = "Tic Tac Toe";
     this.initValues();    
   }
 
   initValues() {
     this.table = [];
+    this.checkFirstGame();
     this.box = new BoxComponent();
     this.player = true;
     this.winner = null;
@@ -42,22 +46,25 @@ export class TictacAppComponent implements OnInit {
     }
     console.log(this.table);
     this.checkWinner();
+    this.checkFirstGameResult;
   }
 
   checkWinner() {
     //diagonala
-    if(this.table[0][0] == this.table[1][1] && this.table[1][1] == this.table[2][2] && this.table[2][2] == true) {
-      
+    if(this.table[0][0] == this.table[1][1] && this.table[1][1] == this.table[2][2] && this.table[2][2] == true) {      
       this.winner = "X";
     } else if (this.table[0][0] == this.table[1][1] && this.table[1][1] == this.table[2][2] && this.table[2][2] == false) {
-      //this.winner = "0";
       this.winner = "0";
+    } else {
+      this.checkFirstGameResult = true;
     }
 
     if(this.table[2][0] == this.table[1][1] && this.table[1][1] == this.table[0][2] && this.table[0][2] == true) {
       this.winner = "X";
     } else if (this.table[2][0] == this.table[1][1] && this.table[1][1] == this.table[0][2] && this.table[0][2] == false) {
       this.winner = "0";
+    } else {
+      this.checkFirstGameResult = true;
     }
 
     //linia 0
@@ -65,18 +72,24 @@ export class TictacAppComponent implements OnInit {
       this.winner = "X";
     } else if (this.table[0][0] == this.table[0][1] && this.table[0][1] == this.table[0][2] && this.table[0][2] == false) {
       this.winner = "0";
+    } else {
+      this.checkFirstGameResult = true;
     }
     //linia 1
-    if(this.table[1][0] == this.table[0][1] && this.table[1][1] == this.table[1][2] && this.table[1][2] == true) {
+    if(this.table[1][0] == this.table[1][1] && this.table[1][1] == this.table[1][2] && this.table[1][2] == true) {
       this.winner = "X";
-    } else if (this.table[1][0] == this.table[0][1] && this.table[1][1] == this.table[1][2] && this.table[1][2] == false) {
+    } else if (this.table[1][0] == this.table[1][1] && this.table[1][1] == this.table[1][2] && this.table[1][2] == false) {
       this.winner = "0";
+    } else {
+      this.checkFirstGameResult = true;
     }
     //linia 2
     if(this.table[2][0] == this.table[2][1] && this.table[2][1] == this.table[2][2] && this.table[2][2] == true) {
       this.winner = "X";
     } else if (this.table[2][0] == this.table[2][1] && this.table[2][1] == this.table[2][2] && this.table[2][2] == false) {
       this.winner = "0";
+    } else {
+      this.checkFirstGameResult = true;
     }
 
     //coloana 0
@@ -84,24 +97,36 @@ export class TictacAppComponent implements OnInit {
       this.winner = "X";
     } else if (this.table[0][0] == this.table[1][0] && this.table[1][0] == this.table[2][0] && this.table[2][0] == false) {
       this.winner = "0";
+    } else {
+      this.checkFirstGameResult = true;
     }
     //coloana 1
     if(this.table[0][1] == this.table[1][1] && this.table[1][1] == this.table[2][1] && this.table[2][1] == true) {
       this.winner = "X";
     } else if (this.table[0][1] == this.table[1][1] && this.table[1][1] == this.table[2][1] && this.table[2][1] == false) {
       this.winner = "0";
+    } else {
+      this.checkFirstGameResult = true;
     }
     //coloana 2
     if(this.table[0][2] == this.table[1][2] && this.table[1][2] == this.table[2][2] && this.table[2][2] == true) {
       this.winner = "X";
     } else if (this.table[0][2] == this.table[1][2] && this.table[1][2] == this.table[2][2] && this.table[2][2] == false) {
       this.winner = "0";
+    } else {
+      this.checkFirstGameResult = true;
     }
   }
 
-  restartGame() {
-    this.initValues()
+  checkFirstGame() {
+    this.checkFirstGameResult = this.table.indexOf(undefined) > -1;
   }
+
+  restartGame() {
+    this.initValues();
+  }
+
+
 
   ngOnInit() {
 
