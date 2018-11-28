@@ -12,6 +12,7 @@ import { UserComponent } from './userexercise/user/user.component';
 import { UserexerciseComponent } from './userexercise/userexercise.component';
 import { TictacAppComponent } from './tictac-app/tictac-app.component';
 import { PassGameAppComponent } from './pass-game-app/pass-game-app.component';
+import { CarFormComponent } from './car-form/car-form.component';
 
 
 const routes: Routes = [
@@ -52,6 +53,10 @@ const routes: Routes = [
   {
     path: 'pass-game-app',
     component: PassGameAppComponent
+  },
+  {
+    path: 'car-form',
+    component: CarFormComponent
   },
   //General
   {

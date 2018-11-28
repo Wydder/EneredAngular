@@ -5,3 +5,11 @@ h1 {
 .button-container {
   left: calc(50% - 400px);
 }
+
+.second {
+  top: calc(50% + 30px);
+}
+
+.third {  
+  top: calc(50% + 95px);
+}

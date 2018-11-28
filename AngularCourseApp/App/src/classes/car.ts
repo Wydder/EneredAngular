@@ -24,6 +24,16 @@ export class CarTwin {
 
 }
 
+export class CarExercise {
+  model: string;
+  year: number;
+  vin: string;
+
+  engine: string;
+
+  forSale: boolean;
+}
+
 class Wheel {
 
 }
