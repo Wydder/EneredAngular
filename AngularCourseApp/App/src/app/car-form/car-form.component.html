@@ -3,7 +3,7 @@
     <div class="form-group">
       <label for="model">Car model</label>
       <input required name="model" #model="ngModel" class="form-control" type="text" [(ngModel)]="carModel.model">
-      <div [hidden]="model.valid || model.">
+      <div [hidden]="model.valid">
         <p>Model name requierd</p>
       </div>
     </div>

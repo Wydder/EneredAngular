@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -63,6 +63,7 @@ import { PlayerComponent } from './pass-game-app/player/player.component';
 import { AddTodoComponent } from './todo-app/add-todo/add-todo.component';
 import { BoxComponent } from './tictac-app/box/box.component';
 import { CarFormComponent } from './car-form/car-form.component';
+import { AnotherTypeOfFormComponent } from './another-type-of-form/another-type-of-form.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +84,8 @@ import { CarFormComponent } from './car-form/car-form.component';
     PlayerComponent,
     AddTodoComponent,
     BoxComponent,
-    CarFormComponent
+    CarFormComponent,
+    AnotherTypeOfFormComponent
   ],
   imports: [
     BrowserModule,
@@ -124,7 +126,8 @@ import { CarFormComponent } from './car-form/car-form.component';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTreeModule
+    MatTreeModule,
+    ReactiveFormsModule
   ],
   exports: [
     CdkTableModule,
