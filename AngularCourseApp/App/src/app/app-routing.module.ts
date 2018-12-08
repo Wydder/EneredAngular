@@ -14,6 +14,7 @@ import { TictacAppComponent } from './tictac-app/tictac-app.component';
 import { PassGameAppComponent } from './pass-game-app/pass-game-app.component';
 import { CarFormComponent } from './car-form/car-form.component';
 import { AnotherTypeOfFormComponent } from './another-type-of-form/another-type-of-form.component';
+import { ObservableComponent } from './observable/observable.component';
 
 
 const routes: Routes = [
@@ -62,6 +63,10 @@ const routes: Routes = [
   {
     path: 'another-type-of-form',
     component: AnotherTypeOfFormComponent
+  },
+  {
+    path: 'observable-exercise',
+    component: ObservableComponent
   },
   //General
   {

@@ -64,6 +64,7 @@ import { AddTodoComponent } from './todo-app/add-todo/add-todo.component';
 import { BoxComponent } from './tictac-app/box/box.component';
 import { CarFormComponent } from './car-form/car-form.component';
 import { AnotherTypeOfFormComponent } from './another-type-of-form/another-type-of-form.component';
+import { ObservableComponent } from './observable/observable.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,8 @@ import { AnotherTypeOfFormComponent } from './another-type-of-form/another-type-
     AddTodoComponent,
     BoxComponent,
     CarFormComponent,
-    AnotherTypeOfFormComponent
+    AnotherTypeOfFormComponent,
+    ObservableComponent
   ],
   imports: [
     BrowserModule,

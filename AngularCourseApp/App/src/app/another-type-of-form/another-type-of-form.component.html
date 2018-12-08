@@ -20,6 +20,18 @@
             </div>
         </div>        
       </div>
+      
+      <div class="form-group">
+        <label for="engine">Car year</label>
+        <select class="form-control" formControlName="engine" type="text">
+          <option *ngFor="let engine of engines">{{engine}}</option>
+        </select>
+        <div *ngIf="carForm.controls.engine.errors && !carForm.controls.engine.pristine">          
+          <div *ngIf="carForm.controls.engine.errors.required">
+            <p>Please select an engine</p>
+          </div>
+      </div>
+      </div>
       <div class="form-group">
           <label for="year">Car year</label>
           <input id="year" formControlName="year" class="form-control" type="number" >
@@ -27,11 +39,12 @@
             <p>Year name requierd</p>
           </div>
         </div>
-        <div class="form-group">
-            <label for="forSale">Car year</label>
-            <input id="forSale" formControlName="forSale" class="form-control" type="checkbox" >
+        <div class="form-check">
+            <input id="forSale" formControlName="forSale" class="form-check-input" type="checkbox" >
+            <label for="forSale">Is this car for sale?</label>
           </div>
     
     <button type="submit" class="btn btn-primary" [disabled]="!carForm.valid">Save</button>
+    <button class="btn btn-primary" [disabled]="!carForm.dirty" (click)="resetForm()">Reset</button>
   </form>
 </div>
