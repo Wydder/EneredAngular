@@ -4,6 +4,7 @@ export class Employee {
     age: number;
     ocupation: string;
     gender: GenderType;
+    is_active: boolean;
 
 
     constructor(firstName, lastName, gender: GenderType) {
