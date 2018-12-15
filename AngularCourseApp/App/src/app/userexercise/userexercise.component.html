@@ -1,4 +1,12 @@
-<div class="container">
+<div *ngIf="loadingSpinner" class="loadingSpinner">
+    <div class="lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<div *ngIf="!loadingSpinner" class="container">
   <div class="tablerow">
     <div class="tablecell">
       <p>Username</p>

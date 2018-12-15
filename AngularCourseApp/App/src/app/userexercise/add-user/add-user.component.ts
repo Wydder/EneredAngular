@@ -1,6 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { User } from 'src/classes/user';
 import { EventEmitter } from '@angular/core';
+import { RestApiService } from 'src/app/services/rest-api.service';
 
 @Component({
   selector: 'app-add-user',
@@ -9,11 +10,12 @@ import { EventEmitter } from '@angular/core';
 })
 export class AddUserComponent implements OnInit {
   user: User;
+  restApi: RestApiService;
   
   @Output()
   onAdd: EventEmitter<User> = new EventEmitter();
 
-  constructor() { 
+  constructor(restApi: RestApiService) { 
     this.user = new User();
   }
 

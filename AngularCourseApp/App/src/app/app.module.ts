@@ -65,6 +65,7 @@ import { BoxComponent } from './tictac-app/box/box.component';
 import { CarFormComponent } from './car-form/car-form.component';
 import { AnotherTypeOfFormComponent } from './another-type-of-form/another-type-of-form.component';
 import { ObservableComponent } from './observable/observable.component';
+import { HttpModule } from '@angular/http'
 
 @NgModule({
   declarations: [
@@ -129,7 +130,8 @@ import { ObservableComponent } from './observable/observable.component';
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
   exports: [
     CdkTableModule,
