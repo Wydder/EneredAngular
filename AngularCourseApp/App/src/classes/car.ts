@@ -25,6 +25,7 @@ export class CarTwin {
 }
 
 export class CarExercise {
+  _id: string;
   model: string;
   year: number;
   vin: string;

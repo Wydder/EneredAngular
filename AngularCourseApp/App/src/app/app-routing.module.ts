@@ -15,6 +15,8 @@ import { PassGameAppComponent } from './pass-game-app/pass-game-app.component';
 import { CarFormComponent } from './car-form/car-form.component';
 import { AnotherTypeOfFormComponent } from './another-type-of-form/another-type-of-form.component';
 import { ObservableComponent } from './observable/observable.component';
+import { AddCarComponent } from './car-form/add-car/add-car.component';
+import { EditCarComponent } from './car-form/edit-car/edit-car.component';
 
 
 const routes: Routes = [
@@ -56,9 +58,18 @@ const routes: Routes = [
     path: 'pass-game-app',
     component: PassGameAppComponent
   },
+  //Car form routes
   {
     path: 'car-form',
     component: CarFormComponent
+  },
+  {
+    path: 'car-form/add-car',
+    component: AddCarComponent
+  },
+  {
+    path: 'car-form/edit-car/:id',
+    component: EditCarComponent
   },
   {
     path: 'another-type-of-form',

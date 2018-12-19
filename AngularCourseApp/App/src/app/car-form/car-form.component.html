@@ -1,4 +1,4 @@
-<div class="container">
+<div *ngIf="carModel != undefined" class="container">
   <form #carForm="ngForm" (ngSubmit)="carSubmit()">
     <div class="form-group">
       <label for="model">Car model</label>

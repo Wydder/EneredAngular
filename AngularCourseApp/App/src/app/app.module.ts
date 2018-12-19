@@ -65,7 +65,9 @@ import { BoxComponent } from './tictac-app/box/box.component';
 import { CarFormComponent } from './car-form/car-form.component';
 import { AnotherTypeOfFormComponent } from './another-type-of-form/another-type-of-form.component';
 import { ObservableComponent } from './observable/observable.component';
-import { HttpModule } from '@angular/http'
+import { HttpModule } from '@angular/http';
+import { AddCarComponent } from './car-form/add-car/add-car.component';
+import { EditCarComponent } from './car-form/edit-car/edit-car.component'
 
 @NgModule({
   declarations: [
@@ -88,7 +90,9 @@ import { HttpModule } from '@angular/http'
     BoxComponent,
     CarFormComponent,
     AnotherTypeOfFormComponent,
-    ObservableComponent
+    ObservableComponent,
+    AddCarComponent,
+    EditCarComponent
   ],
   imports: [
     BrowserModule,
