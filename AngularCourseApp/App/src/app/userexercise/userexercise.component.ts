@@ -15,6 +15,7 @@ export class UserexerciseComponent implements OnInit {
   constructor(restApi: RestApiService) {
     this.userList = [];
     this.restApi = restApi;
+    
     // var test = this.restApi;
     // console.log(test.url);
 

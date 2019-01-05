@@ -1,0 +1,17 @@
+High level Tasks
+
+1. Manually add into database Categories for incomes and expenses (1h)-(4h) - Extra page
+
+2. Create form to submit Income & develop Add Income functionality (8h)
+
+3. Create form to submit Expense & develop Add Expense functionality (8h)
+
+4. Create Monthly Report view - select month & year from drop downs and GET incomes and expenses (8h)
+
+5. Display Incomes and Expenses in two grids/tables with corresponding data on Monthly Report view (8h)
+
+6. Add possibility to edit & delete an Income (4h)
+
+7. Add possibility to edit & delete an Expense (4h)
+
+8. Create charts in Monthly Report view with breakdown for incomes and expenses (8h)
